@@ -1,6 +1,6 @@
 {
   "name": "Minimalist Climate Stack Card",
-  "content_type": "template",
+  "content_type": "lovelace",
   "render_readme": true,
   "authors": ["Landako1"],
   "home_assistant": "2024.1.0",
