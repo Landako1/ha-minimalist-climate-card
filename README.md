@@ -45,9 +45,21 @@ Click the button below to add this repository directly to your HACS:
 
 ## 🛠️ Usage
 
-Once installed, go to your dashboard, click **Edit Dashboard** -> **Add Card** -> **Manual**, and paste the following configuration:
+Once installed, go to your dashboard, click **Edit Dashboard** -> **Add Card** -> **Manual**, and paste the following configuration. 
+
+You only need to define your sensors – everything else is completely optional!
 
 ```yaml
 type: custom:minimalist-climate-card
+
+# --- REQUIRED ---
 temperature_entity: sensor.YOUR_TEMPERATURE_SENSOR
 humidity_entity: sensor.YOUR_HUMIDITY_SENSOR
+
+# --- OPTIONAL ---
+name_temp: Temp       # Custom name for temperature
+name_hum: Hum         # Custom name for humidity
+hours_to_show: 48     # Graph history in hours (default is 24)
+height: 100           # Adjust the height of the graph (default is 70)
+
+Created with ❤️ by Landako1. If you like this card, please ⭐ the repository!
