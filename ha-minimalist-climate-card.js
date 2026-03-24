@@ -1,25 +1,25 @@
-class LandakoClimateCard extends HTMLElement {
-  // Wird aufgerufen, wenn der Nutzer die Karte im Dashboard konfiguriert
+class MinimalistClimateCard extends HTMLElement {
+  // Called when the user configures the card in the dashboard
   setConfig(config) {
     if (!config.temperature_entity || !config.humidity_entity) {
-      throw new Error("Du musst 'temperature_entity' und 'humidity_entity' angeben!");
+      throw new Error("You need to define 'temperature_entity' and 'humidity_entity'!");
     }
     
     this._config = config;
 
-    // Hier bauen wir im Hintergrund deinen komplexen YAML-Code nach!
+    // Build the underlying mini-graph-card configuration
     const miniGraphConfig = {
       type: "custom:mini-graph-card",
       entities: [
         {
           entity: config.temperature_entity,
-          name: config.name_temp || "Temperatur",
+          name: config.name_temp || "Temperature",
           show_state: true,
           color_thresholds: [{ value: 0, color: "#52ADF2" }]
         },
         {
           entity: config.humidity_entity,
-          name: config.name_hum || "Feuchtigkeit",
+          name: config.name_hum || "Humidity",
           show_state: true,
           y_axis: "secondary",
           color_thresholds: [
@@ -39,43 +39,43 @@ class LandakoClimateCard extends HTMLElement {
       style: "ha-card { border: none; box-shadow: none; margin: 0; padding: 0; }" 
     };
 
-    // Erstelle das HTML-Element für die mini-graph-card
+    // Create the HTML element for the mini-graph-card
     if (!this.graphCard) {
       this.graphCard = document.createElement("mini-graph-card");
     }
     
-    // Übergebe die Konfiguration
+    // Pass the configuration
     this.graphCard.setConfig(miniGraphConfig);
 
-    // Setze das Layout unserer eigenen Karte (ersetzt die stack-in-card!)
+    // Set the layout for our custom card
     this.innerHTML = "";
     const card = document.createElement("ha-card");
-    card.style.overflow = "hidden"; // Verhindert überstehende Ecken
+    card.style.overflow = "hidden"; // Prevent protruding corners
     card.appendChild(this.graphCard);
     this.appendChild(card);
   }
 
-  // Home Assistant sendet jede Sekunde neue Sensor-Daten hierhin
+  // Home Assistant sends updated sensor data here
   set hass(hass) {
     if (this.graphCard) {
-      this.graphCard.hass = hass; // Wir reichen die Daten einfach durch
+      this.graphCard.hass = hass; // Pass the data through
     }
   }
 
-  // Teilt Home Assistant mit, wie groß die Karte im Raster ist
+  // Tells Home Assistant the grid size of the card
   getCardSize() {
     return 3;
   }
 }
 
-// Registriere die neue Karte im System
-customElements.define("landako-climate-card", LandakoClimateCard);
+// Register the new card in the system
+customElements.define("minimalist-climate-card", MinimalistClimateCard);
 
-// Füge sie der Auswahl in der Home Assistant UI hinzu (damit sie im Menü auftaucht!)
+// Add it to the custom cards list in the Home Assistant UI
 window.customCards = window.customCards || [];
 window.customCards.push({
-  type: "landako-climate-card",
-  name: "Landako Climate Card",
+  type: "minimalist-climate-card",
+  name: "Minimalist Climate Card",
   preview: true,
-  description: "Eine elegante Klima-Karte für Temperatur und Luftfeuchtigkeit."
+  description: "An elegant climate card for temperature and humidity."
 });
