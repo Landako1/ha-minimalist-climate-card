@@ -2,7 +2,9 @@
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
 
-A sleek, space-saving custom card for Home Assistant to display temperature and humidity in a single, seamless graph. No complex YAML required anymore!
+A sleek, space-saving custom card for Home Assistant to display temperature and humidity in a single, seamless graph. No complex YAML required anymore! 
+
+**Created with ❤️ by Landako1. If you like this card, please ⭐ the repository!**
 
 ## 📸 Preview
 
@@ -61,7 +63,3 @@ name_temp: Temp       # Custom name for temperature
 name_hum: Hum         # Custom name for humidity
 hours_to_show: 48     # Graph history in hours (default is 24)
 height: 100           # Adjust the height of the graph (default is 70)
-
-<div align="center">
-<i>Created with ❤️ by Landako1. If you like this card, please ⭐ the repository!</i>
-</div>
