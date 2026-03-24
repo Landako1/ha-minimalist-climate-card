@@ -62,4 +62,6 @@ name_hum: Hum         # Custom name for humidity
 hours_to_show: 48     # Graph history in hours (default is 24)
 height: 100           # Adjust the height of the graph (default is 70)
 
-Created with ❤️ by Landako1. If you like this card, please ⭐ the repository!
+<div align="center">
+<i>Created with ❤️ by Landako1. If you like this card, please ⭐ the repository!</i>
+</div>
