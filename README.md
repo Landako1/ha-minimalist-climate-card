@@ -24,14 +24,7 @@ This card requires the following frontend plugins from **HACS**:
 
 ## 🚀 Installation & Usage
 
-### Option 1: HACS (Recommended)
-1. Open **HACS** -> **Frontend**.
-2. Click the **three dots** (top right) -> **Custom repositories**.
-3. Repository: `https://github.com/Landako1/ha-minimalist-climate-card`
-4. Category: **Dashboard**.
-5. Click **Add** and then **Install**.
-
-### Option 2: Manual
+### Manual install:
 1. Copy the code from `climate-card.yaml`.
 2. Add a **Manual Card** to your dashboard and paste the code.
 3. Replace the sensor entities with your own.
