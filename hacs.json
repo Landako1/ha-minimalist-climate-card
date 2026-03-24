@@ -1,5 +1,5 @@
 {
-  "name": "Landako Climate Card",
+  "name": "Minimalist Climate Card",
   "content_type": "plugin",
   "filename": "ha-minimalist-climate-card.js",
   "render_readme": true,
