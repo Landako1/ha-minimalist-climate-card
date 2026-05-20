@@ -63,3 +63,6 @@ name_temp: Temp       # Custom name for temperature
 name_hum: Hum         # Custom name for humidity
 hours_to_show: 48     # Graph history in hours (default is 24)
 height: 100           # Adjust the height of the graph (default is 70)
+```
+## 📄 License
+This project is released under the **MIT License**.
