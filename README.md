@@ -4,8 +4,6 @@
 
 A sleek, space-saving custom card for Home Assistant to display temperature and humidity in a single, seamless graph. No complex YAML required anymore! 
 
-**Created with ❤️ by Landako1. If you like this card, please ⭐ the repository!**
-
 ## 📸 Preview
 
 | Light Mode | Dark Mode |
